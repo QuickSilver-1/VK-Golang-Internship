@@ -1,3 +1,3 @@
-module github.com/QuickSilver-1/VK-Golang-Internship
+module workerpool
 
 go 1.22.1

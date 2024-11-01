@@ -15,7 +15,7 @@ type WorkerPool struct {
 	Workers 	[]string
 }
 
-func (wp *WorkerPool) AddWorker(name string, worker func(string)) error {
+func (wp *WorkerPool) AddWorker(name string, worker func(string) interface{}) error {
 
 	if slices.Contains(wp.Workers, name) {
 		return fmt.Errorf("worker with name %s already exist, please change name and try again", name)
@@ -23,7 +23,7 @@ func (wp *WorkerPool) AddWorker(name string, worker func(string)) error {
 	
 	wp.wg.Add(1)
 
-	go func(name string, worker func(string)) {
+	go func(name string, worker func(string) interface{}) {
 		defer wp.wg.Done()
 		
 		for command := range wp.DataChan {
@@ -36,8 +36,8 @@ func (wp *WorkerPool) AddWorker(name string, worker func(string)) error {
 
 			default:
 				start := time.Now()
-				worker(command)
-				log.Printf("Worker %s processed the string %s in %s\n", name, command, time.Since(start))
+				result := worker(command)
+				log.Printf("Worker '%s' processed the string '%s' with result '%s' in %s\n", name, command, result, time.Since(start))
 			}
 		}
 	}(name, worker)
@@ -64,6 +64,10 @@ func (wp *WorkerPool) CloseWorkerPool() {
 	close(wp.DataChan)
 	wp.wg.Wait()
 	log.Println("Worker-pool closed")
+}
+
+func (wp *WorkerPool) AddData(name string) {
+	wp.DataChan<- name
 }
 
 func CreateWorkerPool() *WorkerPool {
