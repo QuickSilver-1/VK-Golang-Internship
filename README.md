@@ -1,6 +1,7 @@
 # VK-Golang-Internship
  
-<h2>Задание в рамках отбора на стажировку Golang Backend-разработчика VK Tech</h2>
+<h3>Задание в рамках отбора на стажировку Golang Backend-разработчика VK Tech</h3>
+![Build Status](https://github.com/QuickSilver-1/VK-Golang-Internship/actions/workflows/go.yml/badge.svg)
 
 <h3>Структура модуля</h3>
 <ol>
