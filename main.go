@@ -6,6 +6,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 	"workerpool/pkg"
 )
 
@@ -23,6 +24,11 @@ func upper(str string) interface{} {
 
 func lower(str string) interface{} {
 	return strings.ToLower(str)
+}
+
+func longTime(str string) interface{} {
+    time.Sleep(100 * time.Millisecond)
+	return str
 }
 
 func main() {
@@ -44,9 +50,11 @@ func main() {
 	wp.AddWorker("doubler", upper)
 	wp.AddWorker("upper", upper)
 	wp.AddWorker("lower", lower)
+	wp.AddWorker("time", longTime)
+	wp.RemoveWorker("1")
 
 	for i := 0; i < 5; i++ {
-		wp.AddData(fmt.Sprintf("TeSt %d", i))
+		go wp.AddData(fmt.Sprintf("TeSt %d", i))
 	}
 
 	wp.CloseWorkerPool()

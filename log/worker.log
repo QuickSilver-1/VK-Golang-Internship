@@ -1,0 +1,34 @@
+2024/11/01 21:11:19 New worker-pool created
+2024/11/01 21:11:19 Worker len started
+2024/11/01 21:11:19 Worker doubler started
+2024/11/01 21:11:19 Error: worker with name doubler already exist, please change name and try again
+2024/11/01 21:11:19 Worker upper started
+2024/11/01 21:11:19 Worker lower started
+2024/11/01 21:11:19 Worker time started
+2024/11/01 21:11:19 Error: worker with name 1 not exist, please change name and try again
+2024/11/01 21:11:19 Worker 'lower' processed the string 'TeSt 0' with result 'test 0' in 0s
+2024/11/01 21:11:19 Worker 'lower' processed the string 'TeSt 1' with result 'test 1' in 0s
+2024/11/01 21:11:19 Worker 'lower' processed the string 'TeSt 4' with result 'test 4' in 0s
+2024/11/01 21:11:19 Worker 'len' processed the string 'TeSt 0' with result '6' in 0s
+2024/11/01 21:11:19 Worker 'doubler' processed the string 'TeSt 0' with result 'TeSt 0TeSt 0' in 0s
+2024/11/01 21:11:19 Worker 'doubler' processed the string 'TeSt 2' with result 'TeSt 2TeSt 2' in 0s
+2024/11/01 21:11:19 Worker 'len' processed the string 'TeSt 2' with result '6' in 0s
+2024/11/01 21:11:19 Worker 'len' processed the string 'TeSt 3' with result '6' in 0s
+2024/11/01 21:11:19 Worker 'upper' processed the string 'TeSt 0' with result 'TEST 0' in 0s
+2024/11/01 21:11:19 Worker 'upper' processed the string 'TeSt 2' with result 'TEST 2' in 0s
+2024/11/01 21:11:19 Worker 'upper' processed the string 'TeSt 3' with result 'TEST 3' in 0s
+2024/11/01 21:11:19 Worker 'lower' processed the string 'TeSt 3' with result 'test 3' in 0s
+2024/11/01 21:11:19 Worker 'doubler' processed the string 'TeSt 3' with result 'TeSt 3TeSt 3' in 0s
+2024/11/01 21:11:19 Worker 'lower' processed the string 'TeSt 2' with result 'test 2' in 0s
+2024/11/01 21:11:20 Worker 'time' processed the string 'TeSt 0' with result 'TeSt 0' in 111.7146ms
+2024/11/01 21:11:20 Worker 'upper' processed the string 'TeSt 4' with result 'TEST 4' in 0s
+2024/11/01 21:11:20 Worker 'len' processed the string 'TeSt 4' with result '6' in 0s
+2024/11/01 21:11:20 Worker 'doubler' processed the string 'TeSt 4' with result 'TeSt 4TeSt 4' in 0s
+2024/11/01 21:11:20 Worker 'time' processed the string 'TeSt 4' with result 'TeSt 4' in 110.9611ms
+2024/11/01 21:11:20 Worker 'upper' processed the string 'TeSt 1' with result 'TEST 1' in 0s
+2024/11/01 21:11:20 Worker 'doubler' processed the string 'TeSt 1' with result 'TeSt 1TeSt 1' in 0s
+2024/11/01 21:11:20 Worker 'len' processed the string 'TeSt 1' with result '6' in 0s
+2024/11/01 21:11:20 Worker 'time' processed the string 'TeSt 1' with result 'TeSt 1' in 108.732ms
+2024/11/01 21:11:20 Worker 'time' processed the string 'TeSt 3' with result 'TeSt 3' in 107.5948ms
+2024/11/01 21:11:20 Worker 'time' processed the string 'TeSt 2' with result 'TeSt 2' in 109.8235ms
+2024/11/01 21:11:20 Worker-pool closed
