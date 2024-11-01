@@ -10,6 +10,7 @@ import (
 	"workerpool/pkg"
 )
 
+
 func lenner(str string) interface{} {
 	return strconv.Itoa(len(str))
 }
